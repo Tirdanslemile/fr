@@ -1,0 +1,13 @@
+*, :after, :before {
+    box-sizing: inherit;
+    background-color: transparent !important;
+    color: inherit !important;
+}
+html {
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(255, 0, 0, 0.183);
+    background-image: url("https://krakozia.fr/images/background-slider.png?3266987995b8eb045f5bca75db0d13f8");
+    background-repeat: no-repeat;
+    text-align: left;
+}

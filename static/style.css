@@ -17,6 +17,7 @@ html {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce */
     position: fixed;
     width: 110%; /* Empêche le débordement */
+    height: 10%; 
     z-index: 100; /* Garde la barre au-dessus */
     top: 0;
     display: flex; /* Pour aligner les éléments */

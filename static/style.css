@@ -4,128 +4,72 @@
 html {
     background-attachment: fixed;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.817);
+    background-color: rgba(255, 0, 0, 0.2);
     background-image: url("https://tirdanslemile.github.io/fr/static/background-slider.png");
     background-repeat: no-repeat;
     text-align: left;
 }
-.navigation-container {
-    background: rgba(20, 20, 20, 0.9); /* Couleur de fond semi-transparente */
-    -webkit-backdrop-filter: blur(6px); /* Effet flou (Safari) */
-    backdrop-filter: blur(6px); /* Effet flou (autres navigateurs) */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8); /* Ligne subtile */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre douce */
+.navigation-container{
+    background:rgba(20,20,20,.9);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgb(255, 255, 255, .8);
+    box-shadow: grey;
     position: fixed;
-    width: 110%; /* Empêche le débordement */
-    z-index: 100; /* Garde la barre au-dessus */
-    top: 0;
-    display: flex; /* Pour aligner les éléments */
-    align-items: center; /* Centrage vertical */
-    padding: 0 20px; /* Marges internes */
+    height: 15%; 
+    width: 110%;
+    z-index: 100;
+    top:0;
 }
-
-.navigation-container .logo img {
+.navigation {
+    background: transparent;
+    padding: 20px 0;
+    align-items: center;
+    display: flex;
     position: relative;
 }
-
-.navigation-container .logo .home-button {
-    size: all;
-    background: none; /* Pas de fond */
-    border: none; /* Pas de bordure */
-    padding: 0; /* Supprime les marges internes */
-    cursor: pointer; /* Change le curseur pour indiquer un bouton cliquable */
-}
-
-.navigation-container .logo .home-button img {
-    width: auto; /* Maintient les proportions */
-    height: 90px; /* Ajuste à une taille fixe pour le logo */
-    margin-left: 10%;
-    transition: transform 0.2s ease; /* Animation fluide pour le hover */
-}
-
-.navigation-container .logo .home-button:hover img {
-    transform: scale(1.1); /* Zoom léger au survol */
-}
-.navigation-container .general-button {
-    height: 45%;
-    width: 90%;
-    padding: 30px; /* Espacement interne */
-    border: 2px solid #cccccc00; /* Ajoute une bordure invisible */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Ombre douce */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Indique un bouton cliquable */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation sur interaction */
+.navigation .navigation-column {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-}
-
-.navigation-container .general-button button {
-    flex: 1; /* Chaque bouton prend une part égale de l’espace */
-    margin: 0 5%; /* Ajoute un espacement horizontal entre les boutons */
-    max-width: 150px; /* Limite la largeur des boutons si nécessaire */
-}
-
-.navigation-container .general-button .join-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #000000;
-    background-color: #ffff00;
-    border-radius: 5px;
-    text-decoration: none;
+    width: 45%;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+} 
+.navigation .navigation-column .navigation-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}  
+.navigation .navigation-column .navigation-item.mobile-cart {
+    display: none !important;
+}  
+.navigation .navigation-column .navigation-item .navigation-link {
+    color: white;
+    font-weight: 700;
     font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    box-shadow: 2px 2px 2px rgba(255, 255, 0, 0.7);
-}
-
-.navigation-container .general-button .vote-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #000000;
-    background-color: #55ff00;
-    border-radius: 5px;
+    transition: 0.3s;
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    box-shadow: 2px 2px 2px rgba(25, 255, 0, 0.7);
 }
-
-.navigation-container .general-button .shop-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #000000;
-    background-color: rgb(0, 255, 183);
+.navigation .profile-button {
+    cursor: pointer;
+    z-index: 1200;
+} 
+.navigation .profile-avatar {
+    margin-left: 124px;
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    display: none;
+    z-index: 1200;
+} 
+.navigation .profile-avatar-image {
+    background: none;
     border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    box-shadow: 2px 2px 2px rgba(0, 255, 183, 0.647);
-}
-
-.navigation-container .general-button .link-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #000000;
-    background-color: rgb(0, 85, 255);
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    box-shadow: 2px 2px 2px rgba(0, 85, 255, 0.647);
-}
-
-.navigation-container .general-button .link-button:hover {
-    transform: scale(1.05);
-}
-.navigation-container .general-button .shop-button:hover {
-    transform: scale(1.05);
-}
-.navigation-container .general-button .join-button:hover {
-    transform: scale(1.05);
-}
-
-.navigation-container .general-button .vote-button:hover {
-    transform: scale(1.05);
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
 }
